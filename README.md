@@ -6,6 +6,12 @@ The goal is to create parametric tower geometry in the browser, visualize it in 
 
 ---
 
+# Related Blog Post
+
+A full walkthrough of this project, including the St. Regis-inspired parametric tower studies, can be found here:
+
+https://www.re-tug.com/post/etabs-parametric-building/135
+
 # What This Project Does
 
 This first version creates a simple single-story structural floor plate.
@@ -269,7 +275,7 @@ In `EtabsBridge.csproj`, the ETABS reference should point to your installed ETAB
 
 ```xml
 <Reference Include="ETABSv1">
-  <HintPath>C:\Program Files\Computers and Structures\ETABS 21\ETABSv1.dll</HintPath>
+  <HintPath>C:\Program Files\Computers and Structures\ETABS 23\ETABSv1.dll</HintPath>
   <Private>true</Private>
   <EmbedInteropTypes>false</EmbedInteropTypes>
 </Reference>
@@ -278,26 +284,10 @@ In `EtabsBridge.csproj`, the ETABS reference should point to your installed ETAB
 In `Program.cs`, the ETABS executable path should match the same version:
 
 ```csharp
-string etabsPath = @"C:\Program Files\Computers and Structures\ETABS 21\ETABS.exe";
+string etabsPath = @"C:\Program Files\Computers and Structures\ETABS 23\ETABS.exe";
 ```
 
 These must match.
-
----
-
-# Future Goals
-
-- Add multiple stories
-- Add story-by-story floor plate changes
-- Add square-to-circle-to-square tower transitions
-- Add perimeter mega columns
-- Add external steel diagrid / exoskeleton
-- Add core walls
-- Add gravity loads
-- Add wind load studies
-- Add automatic ETABS analysis runs
-- Read results back from ETABS
-- Show drift, reactions, and member force results in Three.js
 
 ---
 
